@@ -1,0 +1,61 @@
+.footer {
+    padding: 10rem 0 5rem 0;
+    background: #111;
+    font-size: 1.4rem;
+
+    &__logobox {
+        text-align: center;
+    }
+
+    &__logo {
+        width: 15rem;
+        height: auto;
+    }
+
+    &__navigasi {
+        border-top: 1px solid #eee;
+        padding-top: 2rem;
+        display: inline-block;
+        width: 85%;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #eeeeee;
+        display: inline-block;
+        transition: .2s all;
+
+        &:hover {
+            box-shadow: 0 2rem 4rem rgba($warna-hitam, .2);
+            transform: scale(1.2) rotate(5deg);
+            color: $medium-hijau;
+            background: #333;
+        }
+
+        &:active {
+            transform: scale(1.07) rotate(3deg);
+            box-shadow: 0 1rem 2rem rgba($warna-hitam, .2);
+        }
+    }
+
+    &__copyright {
+        color: #eee;
+        border-top: 1px solid #eee;
+        padding-top: 2rem;
+        float: right;
+        width: 85%;
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "latihan-sass",
+  "version": "1.0.0",
+  "description": "Ini adalah latihan belajar sass saya",
+  "main": "index.js",
+  "scripts": {
+    "sass-compile": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Raihan Muhammad",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

@@ -1,0 +1,55 @@
+.testi {
+    width: 75%;
+    margin: auto;
+    font-size: 1.6rem;
+    background: $warna-putih;
+    padding: 6rem;
+    padding-left: 9rem;
+    box-shadow: 0 3rem 6rem rgba($warna-hitam, .1);
+    transform: skewX(-12deg);
+    position: relative;
+
+    &>* {
+        transform: skewX(12deg);
+    }
+
+    &__shape {
+        height: 13rem;
+        width: 13rem;
+        border: none;
+        float: left;
+        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        transform: translateX(-4rem) skewX(12deg);
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        transform: scale(1.4);
+        transition: .5s all;
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        text-align: center;
+        color: $warna-putih;
+        text-transform: uppercase;
+        transition: .5s all;
+        opacity: 0;
+    }
+
+    &:hover &__caption {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    &:hover &__img {
+        filter: blur(5px) brightness(80%);
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,55 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+    color: #777;
+}
+
+.header__utama {
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 4rem;
+
+    &--judul {
+        font-size: 6rem;
+        display: block;
+        font-weight: 400;
+        letter-spacing: 3rem;
+        animation: kanan 1.5s;
+    }
+
+    &--keterangan {
+        font-size: 2rem;
+        display: block;
+        font-weight: 400;
+        letter-spacing: 1.65rem;
+        animation: kiri 1.5s;
+    }
+}
+
+.header__kedua {
+    font-size: 3rem;
+    text-transform: uppercase;
+    background: linear-gradient(to right, $hijau-muda, $hijau-tua);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+}
+
+.header__ketiga {
+    font-size: 1.6rem;
+}
+
+.paragrap {
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+
+    &:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+}

@@ -1,0 +1,38 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 55%;
+        box-shadow: 0 2rem 4rem rgba($warna-hitam, .4);
+        position: absolute;
+        transition: .3s all;
+        z-index: 5;
+
+        &:hover {
+            transform: scale(1.2);
+            outline: 1.5rem solid $hijau-muda;
+            outline-offset: 2rem;
+            z-index: 10;
+        }
+
+        &--1 {
+            top: -2rem;
+            left: 0;
+        }
+
+        &--2 {
+            right: 2rem;
+            top: 2rem;
+        }
+
+        &--3 {
+            top: 10rem;
+            left: 20%;
+        }
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.9);
+        box-shadow: 0 1rem 3rem rgba($warna-hitam, .3);
+    }
+}

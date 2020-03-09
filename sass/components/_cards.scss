@@ -1,0 +1,144 @@
+.card {
+    perspective: 150rem;
+    position: relative;
+    height: 53rem;
+
+    &__sisi {
+        font-size: 2rem;
+        height: 53rem;
+        transition: 1.5s all;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        box-shadow: 0 1rem 4rem rgba($warna-hitam, .1);
+        border-radius: 5px;
+        overflow: hidden;
+
+        &--belakang {
+            transform: rotateY(180deg);
+
+            &--1 {
+                background: linear-gradient(to right bottom, $orange-muda, $orange-tua);
+            }
+
+            &--2 {
+                background: linear-gradient(to right bottom, $hijau-muda, $hijau-tua);
+            }
+
+            &--3 {
+                background: linear-gradient(to right bottom, $biru-muda, $biru-tua);
+            }
+        }
+    }
+
+    &:hover &__sisi {
+        &--depan {
+            transform: rotateY(-180deg);
+        }
+
+        &--belakang {
+            transform: rotateY(0);
+        }
+    }
+
+    // Pengaturan bagian depan
+    &__gambar {
+        height: 23rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+        -moz-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+        -o-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+        -ms-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+
+        &--1 {
+            background: linear-gradient(to right bottom, $orange-muda, $orange-tua), url('../img/nat-5.jpg') no-repeat top /cover;
+        }
+
+        &--2 {
+            background: linear-gradient(to right bottom, $hijau-muda, $hijau-tua),
+                url('../img/nat-6.jpg') no-repeat top /cover;
+        }
+
+        &--3 {
+            background: linear-gradient(to right bottom, $biru-muda, $biru-tua),
+                url('../img/nat-7.jpg') no-repeat top /cover;
+        }
+    }
+
+    &__heading {
+        font-size: 2.5rem;
+        position: absolute;
+        top: 12rem;
+        left: 2rem;
+        text-transform: uppercase;
+        color: $warna-putih;
+        font-weight: 300;
+        width: 85%;
+
+        &--span {
+            padding: 1rem 2rem;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+            -moz-box-decoration-break: clone;
+
+            &--1 {
+                background: linear-gradient(rgba($orange-muda, .8), rgba($orange-tua, .8));
+            }
+
+            &--2 {
+                background: linear-gradient(rgba($hijau-muda, .8), rgba($hijau-tua, .8));
+            }
+
+            &--3 {
+                background: linear-gradient(rgba($biru-muda, .8), rgba($biru-tua, .8));
+            }
+        }
+    }
+
+    &__table {
+        width: 80%;
+        margin: 0 auto;
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            font-size: 1.5rem;
+
+            li {
+                text-align: center;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #e7e7e7;
+                }
+            }
+        }
+    }
+
+    // Pengaturan bagian belakang 
+    &__harga {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+
+        &--judul {
+            font-size: 2.5rem;
+            color: $warna-putih;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+
+        &--nilai {
+            font-size: 5rem;
+            font-weight: 100;
+            text-transform: uppercase;
+            color: $warna-putih;
+        }
+    }
+}

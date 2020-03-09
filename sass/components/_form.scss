@@ -1,0 +1,98 @@
+.form {
+    &__group {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__input {
+        font-size: 1.6rem;
+        padding: 1.5rem 2rem;
+        font-family: "Lato", sans-serif;
+        color: $warna-text;
+        width: 100%;
+        display: block;
+        border: none;
+        border-bottom: 3px solid transparent;
+        transition: .3s all;
+
+        &:focus {
+            outline: none;
+            border-bottom: 3px solid $medium-hijau;
+            box-shadow: 0 1rem 2rem rgba($warna-hitam, .1);
+
+            &:invalid {
+                border-bottom: 3px solid $orange-tua;
+            }
+        }
+    }
+
+    &__label {
+        display: block;
+        margin: 1rem 0 0 2rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        opacity: 1;
+        transition: .7s all;
+    }
+
+    &__input:placeholder-shown+&__label {
+        transform: translateY(-4rem);
+        opacity: 0;
+    }
+
+    // Radio form
+
+    &__radio {
+
+
+        &--group {
+            width: 49%;
+            display: inline-block;
+        }
+
+        &--input {}
+
+        &--label {
+            font-size: 1.5rem;
+            font-weight: 600;
+            position: relative;
+            padding-left: 4rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &--button {
+            height: 3rem;
+            width: 3rem;
+            display: block;
+            border: 5px solid $medium-hijau;
+            position: absolute;
+            top: -.5rem;
+            left: 0;
+            border-radius: 50%;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 70%;
+                height: 70%;
+                background: $medium-hijau;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: .3s all;
+            }
+        }
+
+        &--input:checked+&--label &--button::after {
+            opacity: 1;
+        }
+    }
+
+}

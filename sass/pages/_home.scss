@@ -1,0 +1,32 @@
+.section-about {
+    padding: 10rem 0;
+    margin-top: -5rem;
+}
+
+.section-feature {
+    padding: 20rem 0;
+    margin-top: -10rem;
+    background: linear-gradient(to right bottom, rgba(126, 213, 111, .8), rgba(40, 180, 133, .8)),
+        url('../img/nat-4.jpg') no-repeat top /cover;
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+    -moz-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+    ;
+}
+
+.section-card {
+    padding: 15rem 0;
+    margin-top: -15rem;
+    background: #eeeeee;
+}
+
+.section-testi {
+    padding: 20rem 0;
+    background: rgba($warna-putih, .8);
+    position: relative;
+}
+
+.section-booking {
+    padding: 15rem 0;
+    background: linear-gradient(to right bottom, $hijau-muda, $hijau-tua);
+}
