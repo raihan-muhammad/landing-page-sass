@@ -49,6 +49,14 @@
         &--group {
             width: 49%;
             display: inline-block;
+
+            @include responsive(phone) {
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 1.5rem;
+                }
+            }
         }
 
         &--input {}

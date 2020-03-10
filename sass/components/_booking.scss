@@ -1,12 +1,24 @@
 .booking {
     height: 50rem;
+
+    @include responsive(tablet-potrait) {
+        height: auto;
+        background: linear-gradient(105deg, rgba($warna-putih, .8) 100%, transparent 100%),
+            url('../img/nat-10.jpg') no-repeat top /cover;
+    }
+
     // background: url('../img/nat-10.jpg') no-repeat top /cover;
-    background: linear-gradient(105deg, rgba($warna-putih, .8) 50%, transparent 50%), url('../img/nat-10.jpg') no-repeat top /cover;
+    background: linear-gradient(105deg, rgba($warna-putih, .8) 50%, transparent 50%),
+    url('../img/nat-10.jpg') no-repeat top /cover;
     border-radius: 5px;
     box-shadow: 0 2rem 4rem rgba($warna-hitam, .2);
 
     &__form {
         width: 50%;
         padding: 6rem;
+
+        @include responsive(tablet-potrait) {
+            width: 100%;
+        }
     }
 }

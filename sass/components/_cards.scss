@@ -141,4 +141,44 @@
             color: $warna-putih;
         }
     }
+
+    @include responsive(tablet-potrait) {
+        height: auto;
+        background: #fff;
+        box-shadow: 0 1rem 4rem rgba($warna-hitam, .1);
+
+        &__sisi {
+            height: auto;
+            position: relative;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: none;
+
+            &--belakang {
+                transform: rotateY(0deg);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+                -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            }
+        }
+
+        // Pengaturan bagian belakang 
+        &__harga {
+            position: relative;
+            padding: 4rem;
+            left: 0;
+            top: 0;
+            transform: translate(0);
+            text-align: center;
+            width: 100%;
+
+            &--judul {
+                font-size: 1.4rem;
+            }
+
+            &--nilai {
+                font-size: 4rem;
+                font-weight: 100;
+            }
+        }
+    }
 }

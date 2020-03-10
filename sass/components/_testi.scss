@@ -1,4 +1,15 @@
 .testi {
+
+    @include responsive(tablet-potrait) {
+        width: 100%;
+    }
+
+    @include responsive(phone) {
+        transform: skewX(0deg);
+        width: 100%;
+        border-radius: 5px;
+    }
+
     width: 75%;
     margin: auto;
     font-size: 1.6rem;
@@ -11,6 +22,10 @@
 
     &>* {
         transform: skewX(12deg);
+
+        @include responsive(phone) {
+            transform: skewX(0deg);
+        }
     }
 
     &__shape {
@@ -22,6 +37,14 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         transform: translateX(-4rem) skewX(12deg);
+
+        @include responsive(tablet-potrait) {
+            transform: translateX(-2.5rem) skewX(12deg);
+        }
+
+        @include responsive(phone) {
+            transform: translateX(-2rem) skewX(0);
+        }
     }
 
     &__img {

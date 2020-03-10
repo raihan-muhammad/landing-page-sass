@@ -7,6 +7,13 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
     -moz-clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
 
+    @include responsive(phone) {
+        height: 80vh;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    }
+
     &__logo--box {
         position: absolute;
         top: 4rem;

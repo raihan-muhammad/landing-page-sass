@@ -5,3 +5,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 10px;
+
+    @include responsive(tablet-landscape) {
+        font-size: 9px;
+    }
+
+    @include responsive(tablet-potrait) {
+        font-size: 8px;
+    }
+
+    @include responsive(phone) {
+        font-size: 7px;
+    }
+}

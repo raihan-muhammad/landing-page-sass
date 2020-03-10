@@ -1,14 +1,38 @@
 .row {
-    width: $panjang-grid;
+    max-width: $panjang-grid;
+
+    @include responsive(phone) {
+        max-width: 50rem;
+    }
+
+    @include responsive(tablet-potrait) {
+        max-width: 50rem;
+    }
+
     margin: 0 auto;
     margin-bottom: $margin-vertikal;
     @include clearfix;
 
-    [class^="col"] {
+    [class^="col-"] {
         float: left;
 
         &:not(:last-child) {
             margin-right: #{$margin-horizontal};
+        }
+
+        @include responsive(phone) {
+            width: 100% !important;
+            margin-bottom: 4rem !important;
+            margin-right: 0;
+            float: none;
+            padding: 0 3rem;
+        }
+
+        @include responsive(tablet-potrait) {
+            width: 100% !important;
+            margin-bottom: 2rem;
+            margin-right: 0;
+            float: none;
         }
     }
 

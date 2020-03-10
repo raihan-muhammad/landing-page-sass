@@ -5,3 +5,29 @@
         clear: both;
     }
 }
+
+@mixin responsive-font {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin responsive($perangkat) {
+    @if $perangkat==phone {
+        @media (max-width: 600px) {
+            @content;
+        }
+    }
+
+    @if $perangkat==tablet-potrait {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+
+    @if $perangkat==table-landscape {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+}

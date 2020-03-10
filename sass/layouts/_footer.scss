@@ -17,6 +17,11 @@
         padding-top: 2rem;
         display: inline-block;
         width: 85%;
+
+        @include responsive(tablet-potrait) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
@@ -57,5 +62,11 @@
         padding-top: 2rem;
         float: right;
         width: 85%;
+
+        @include responsive(tablet-potrait) {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
     }
 }

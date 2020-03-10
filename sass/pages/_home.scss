@@ -1,6 +1,10 @@
 .section-about {
     padding: 10rem 0;
     margin-top: -5rem;
+
+    @include responsive(tablet-potrait) {
+        padding: 15rem 0;
+    }
 }
 
 .section-feature {
@@ -11,7 +15,13 @@
     clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
     -moz-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
-    ;
+
+    @include responsive(tablet-potrait) {
+        padding: 10rem 0 5rem 0;
+        clip-path: polygon(0 5%, 100% 0, 100% 90%, 0% 100%);
+        -webkit-clip-path: polygon(0 5%, 100% 0, 100% 90%, 0% 100%);
+        -moz-clip-path: polygon(0 5%, 100% 0, 100% 90%, 0% 100%);
+    }
 }
 
 .section-card {
@@ -24,9 +34,17 @@
     padding: 20rem 0;
     background: rgba($warna-putih, .8);
     position: relative;
+
+    @include responsive(tablet-potrait) {
+        padding: 10rem 0 10rem 0;
+    }
 }
 
 .section-booking {
     padding: 15rem 0;
     background: linear-gradient(to right bottom, $hijau-muda, $hijau-tua);
+
+    @include responsive(tablet-potrait) {
+        padding: 10rem 0;
+    }
 }

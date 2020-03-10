@@ -4,10 +4,18 @@
 
 .mb-lg {
     margin-bottom: 8rem;
+
+    @include responsive(tablet-potrait) {
+        margin-bottom: 4rem !important;
+    }
 }
 
 .mb-md {
     margin-bottom: 4rem;
+
+    @include responsive(tablet-potrait) {
+        margin-bottom: 3rem !important;
+    }
 }
 
 .mb-sm {
@@ -16,4 +24,8 @@
 
 .mt-md {
     margin-top: 4rem;
+
+    @include responsive(tablet-potrait) {
+        margin-top: 3rem !important;
+    }
 }

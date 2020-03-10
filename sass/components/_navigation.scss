@@ -70,6 +70,11 @@
             background-position: 100%;
             color: $medium-hijau;
         }
+
+        // Ukuran tablet potrait dan lanjut ke ukuran font
+        @include responsive(tablet-potrait) {
+            font-size: 2.3rem;
+        }
     }
 
     &__checkbox:checked~&__background {
