@@ -40,7 +40,7 @@
 
         @include responsive(phone) {
             width: 100%;
-            display: table-cell;
+            display: none;
         }
     }
 
@@ -55,6 +55,10 @@
     &__gambar {
         width: 100%;
         display: block;
+
+        @include responsive(tablet-potrait) {
+            height: 36vh;
+        }
     }
 
     &__text {

@@ -46,7 +46,6 @@
     // Pengaturan bagian depan
     &__gambar {
         height: 23rem;
-        background-blend-mode: screen;
         clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
         -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
         -moz-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
@@ -65,6 +64,10 @@
         &--3 {
             background: linear-gradient(to right bottom, $biru-muda, $biru-tua),
                 url('../img/nat-7.jpg') no-repeat top /cover;
+        }
+
+        @supports(background-blend-mode: screen) {
+            background-blend-mode: screen;
         }
     }
 

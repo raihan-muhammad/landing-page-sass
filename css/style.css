@@ -204,7 +204,7 @@ body {
 
 .header {
   height: 95vh;
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") no-repeat top/cover;
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg") no-repeat top/cover;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
@@ -215,6 +215,9 @@ body {
       clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
       -moz-clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); } }
+  @media (min-resolution: 192dpi) {
+    .header {
+      background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg") no-repeat top/cover; } }
   .header__logo--box {
     position: absolute;
     top: 4rem;
@@ -437,7 +440,6 @@ body {
     transform: rotateY(0); }
   .card__gambar {
     height: 23rem;
-    background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
     -moz-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
@@ -449,6 +451,9 @@ body {
       background: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/nat-6.jpg") no-repeat top/cover; }
     .card__gambar--3 {
       background: linear-gradient(to right bottom, #2988ff, #5643fa), url("../img/nat-7.jpg") no-repeat top/cover; }
+    @supports (background-blend-mode: screen) {
+      .card__gambar {
+        background-blend-mode: screen; } }
   .card__heading {
     font-size: 2.5rem;
     position: absolute;
@@ -833,7 +838,7 @@ body {
     @media (max-width: 600px) {
       .popup__kiri {
         width: 100%;
-        display: table-cell; } }
+        display: none; } }
   .popup__kanan {
     width: 66.66%;
     display: table-cell;
@@ -843,6 +848,9 @@ body {
   .popup__gambar {
     width: 100%;
     display: block; }
+    @media (max-width: 900px) {
+      .popup__gambar {
+        height: 36vh; } }
   .popup__text {
     font-size: 1.4rem;
     column-count: 2;

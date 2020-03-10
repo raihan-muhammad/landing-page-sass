@@ -340,7 +340,13 @@
 
     <footer class="footer">
         <div class="footer__logobox">
-            <img src="img/logo-green-2x.png" alt="" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                    media="(max-width: 600px)" src="img/logo-green-small-1x.png">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Logo Footer"
+                    src="img/logo-green-1x.png">
+            </picture>
+
         </div>
         <div class="row mt-md">
             <div class="col-1-of-2">
