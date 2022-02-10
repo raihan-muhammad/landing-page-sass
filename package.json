@@ -14,7 +14,7 @@
   "author": "Raihan Muhammad",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "autoprefixer": "^9.7.4",
